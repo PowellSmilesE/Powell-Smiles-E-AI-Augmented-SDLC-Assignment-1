@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:security-code-review:evaluation-case:1.0",
+  "title": "Future labelled evaluation case format",
+  "description": "Schema only: no evaluation examples or dataset are created by the planning phase. Dataset review and coverage rules are specified in spec.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "source_code", "expected_findings"],
+  "properties": {
+    "case_id": { "type": "string", "minLength": 1 },
+    "source_code": { "type": "string", "minLength": 1, "description": "Future harness enforces <=100,000 UTF-8 bytes and <=2,000 logical lines." },
+    "expected_findings": {
+      "type": "array",
+      "description": "Empty array denotes an expected-clean case.",
+      "items": { "$ref": "#/$defs/expected_finding" }
+    }
+  },
+  "$defs": {
+    "expected_finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["expected_finding_id", "vulnerability_category", "severity", "line_start", "line_end"],
+      "properties": {
+        "expected_finding_id": { "type": "string", "minLength": 1 },
+        "vulnerability_category": { "type": "string", "enum": ["SQL Injection", "Command Injection", "Cross-Site Scripting", "Path Traversal", "Insecure Deserialization", "Hardcoded Credentials", "Weak Cryptographic Practices", "Insecure TLS Configuration", "Improper Access Control", "Other"] },
+        "other_weakness_type": { "type": "string", "minLength": 1, "description": "Required by dataset review when category is Other; enforced as a cross-field rule." },
+        "severity": { "type": "string", "enum": ["Critical", "High", "Medium", "Low", "Informational"] },
+        "line_start": { "type": "integer", "minimum": 1 },
+        "line_end": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

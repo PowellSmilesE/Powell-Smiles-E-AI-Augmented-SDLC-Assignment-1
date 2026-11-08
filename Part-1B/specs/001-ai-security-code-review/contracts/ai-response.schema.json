@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:security-code-review:ai-response:1.0",
+  "title": "AI-generated security analysis response",
+  "description": "Model-owned semantic response. Parse duplicate-aware before applying this schema; source-dependent constraints are checked separately.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["analysis_summary", "findings"],
+  "properties": {
+    "analysis_summary": { "type": "string", "minLength": 1 },
+    "findings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/finding" }
+    }
+  },
+  "$defs": {
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["vulnerability_category", "title", "severity", "confidence", "line_start", "line_end", "evidence", "explanation", "remediation"],
+      "properties": {
+        "vulnerability_category": {
+          "type": "string",
+          "enum": ["SQL Injection", "Command Injection", "Cross-Site Scripting", "Path Traversal", "Insecure Deserialization", "Hardcoded Credentials", "Weak Cryptographic Practices", "Insecure TLS Configuration", "Improper Access Control", "Other"]
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "severity": { "type": "string", "enum": ["Critical", "High", "Medium", "Low", "Informational"] },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "line_start": { "type": "integer", "minimum": 1, "description": "Cross-field validator requires line_start <= line_end and line_start within the submitted source line count." },
+        "line_end": { "type": "integer", "minimum": 1, "description": "Cross-field validator requires line_end >= line_start and line_end no greater than the submitted source addressable logical line count." },
+        "evidence": { "type": "string", "minLength": 1, "description": "Must exactly match a substring of the unchanged submitted source within the reported inclusive line range; do not normalize source text." },
+        "explanation": { "type": "string", "minLength": 1 },
+        "remediation": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

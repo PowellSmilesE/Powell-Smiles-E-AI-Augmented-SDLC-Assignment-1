@@ -1,0 +1,10 @@
+# Part-1B local environment and generated caches
+Part-1B/.venv/
+Part-1B/.pytest_cache/
+Part-1B/.ruff_cache/
+Part-1B/.hypothesis/
+Part-1B/.env
+Part-1B/.env.*
+!Part-1B/.env.example
+**/__pycache__/
+*.py[cod]
