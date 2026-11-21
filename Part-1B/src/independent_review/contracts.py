@@ -11,7 +11,7 @@ class Category(str, Enum):
     XSS = "cross_site_scripting"
     PATH_TRAVERSAL = "path_traversal"
     DESERIALIZATION = "unsafe_deserialization"
-    HARDCODED_SECRET = "hardcoded_secret"
+    HARDCODED_SECRET = "hardcoded_secret"  # nosec B105
     WEAK_CRYPTO = "weak_cryptography"
     TLS = "tls_verification_disabled"
     AUTHORIZATION = "broken_authorization"
