@@ -19,7 +19,7 @@
                   "denominator_preservation":  {
                                                    "status":  "pass",
                                                    "evidence_path":  "evidence/gates/denominator-preservation.txt",
-                                                   "sha256":  "adcb740b5e404a3ee4f5655a320d8b0038eb14421b623d794deea0ba8adcadba"
+                                                   "sha256":  "310c6ed10e34205a190f805880d6314f361a31e4a64f9176ade9366188a8533c"
                                                },
                   "credential_non_disclosure":  {
                                                     "status":  "pass",

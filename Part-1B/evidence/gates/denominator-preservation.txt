@@ -18,4 +18,5 @@ Scope:
 This check covers the two recorded evaluation runs and the application's
 evaluation collector, not arbitrary external services.
 
-Reviewer conclusion: Pending final confirmation.
+Reviewer conclusion: PASS. Verified that all 25 benchmark cases were
+retained, including failed cases, with no denominator reduction.
