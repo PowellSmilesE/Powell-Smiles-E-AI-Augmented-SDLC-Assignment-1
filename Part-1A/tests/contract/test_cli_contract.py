@@ -35,6 +35,7 @@ class CliContractTests(unittest.TestCase):
         return subprocess.run(
             [sys.executable, "-m", "alert_manager", "--store", str(self.store), *arguments],
             capture_output=True,
+            input="",
             text=True,
             env=environment,
             timeout=10,
