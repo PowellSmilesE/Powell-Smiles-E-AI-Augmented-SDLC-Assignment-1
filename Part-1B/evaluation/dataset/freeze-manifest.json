@@ -1,0 +1,12 @@
+{
+  "reviewer": "Powell Smiles E",
+  "approved_at": "2026-11-21T14:11:33.268053+00:00",
+  "count": 25,
+  "hashes": {
+    "evaluation/dataset/cases.jsonl": "99597adbd52ee7da1c984fc0528cf2ee0e9a377fd930d25299ba3f2eacd474ba",
+    "evaluation/dataset/reviews.jsonl": "75d81a550e6f388c2c39f4ad4ac6a125a28cc944f4f72e93991d752a61abf9af",
+    "evaluation/score.py": "eb690a0503f9c2205237feeb1f239e61055e6361e929e9935b68d92f607a87b0",
+    "evaluation/harness.py": "2916e8362dde9dfccf0dd80dab1467c82669ca76bd344ce069a2aaded152174f",
+    "specs/001-independent-review/spec.md": "75de621eedb469abfdd2742ae69dc8ff36c5a1dfd7b1db7083f020d545900e81"
+  }
+}
