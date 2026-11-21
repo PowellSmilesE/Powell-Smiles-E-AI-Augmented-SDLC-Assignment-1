@@ -18,7 +18,7 @@ kept separate and unchanged, and must not be described as the baseline for this 
 ## Windows PowerShell quickstart
 
 ```powershell
-cd "C:\path\to\Part-1B-Fresh"
+cd "C:\path\to\Powell-Smiles-E-AI-Augmented-SDLC-Assignment-1\Part-1B"
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install -e '.[dev]'
@@ -28,9 +28,13 @@ py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m scripts.local_gates
 ```
 
-Review `evaluation/dataset/cases.jsonl` and `evaluation/dataset/reviews.jsonl` yourself. All 25
-review statuses intentionally start as Pending. Make any legitimate corrections *before*
-freezing, then set each review status to `Reviewed` with your real reviewer name.
+The 25 benchmark cases have completed human review and were frozen before the
+final live evaluation. All 25 review records have status `Reviewed`.
+
+The reviewed benchmark and freeze manifest are preserved in the repository.
+Do not modify the frozen dataset or review labels after final evaluation.
+For a new evaluation, establish a separate reviewed and frozen benchmark
+rather than altering the historical evaluation evidence.
 
 ```powershell
 .\.venv\Scripts\python.exe -m scripts.freeze --reviewer 'YOUR ACTUAL NAME'
@@ -84,4 +88,24 @@ The six security gates cover source non-execution, prompt-injection resistance, 
 
 These results apply to the documented tests and scope. Prompt-injection resistance is not universal, and external provider data retention is outside the application's verification scope.
 
-Raw live provider responses are intentionally excluded from Git and retained locally to avoid publishing potentially sensitive source content.
+### Evaluation evidence and reproducibility
+
+The final PASS report and six security-gate evidence records are committed
+to GitHub.
+
+The raw live evaluation responses are intentionally excluded from GitHub
+because they may contain source-code snippets and provider-generated content
+that should not be published.
+
+The raw results remain in the private local evaluation workspace.
+
+**Reproducibility limitation:** The GitHub repository preserves the final
+evaluation report and integrity-verified gate evidence, but it does not contain
+all raw responses needed to independently recalculate the 96.0% semantic score.
+
+The original evaluation was verified against locally retained raw responses.
+Do not regenerate, fabricate, or publish sensitive responses solely to make
+the repository self-contained.
+
+The final evaluation covers the documented benchmark and security-gate scope;
+it does not establish universal security or production readiness.
