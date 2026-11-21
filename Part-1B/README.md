@@ -109,3 +109,31 @@ the repository self-contained.
 
 The final evaluation covers the documented benchmark and security-gate scope;
 it does not establish universal security or production readiness.
+
+## Public Evaluation Reproducibility
+
+The original live Groq responses are retained privately and are not
+published in this repository.
+
+A sanitized score-reconstruction dataset is available under
+`evaluation/public_results/`.
+
+The sanitized dataset contains all 25 evaluated cases and retains the
+structured findings needed to reproduce the reported benchmark metrics.
+
+To verify:
+
+    python -m scripts.verify_public_evidence
+
+Expected result:
+- 25/25 cases verified
+- Semantic accuracy: 96.0%
+- Aggregate: PASS
+
+The sanitized outputs are transformed evidence, not verbatim Groq
+responses. Model-generated explanations and remediation narratives
+have been replaced with scoring-preserving placeholders.
+
+This allows independent score reconstruction but does not independently
+authenticate the original model narratives or reproduce the live
+provider interaction.

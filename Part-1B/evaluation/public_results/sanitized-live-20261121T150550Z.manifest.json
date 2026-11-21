@@ -1,0 +1,26 @@
+{
+  "kind": "sanitized_score_reconstruction_not_raw_provider_transcript",
+  "run": "20261121T150550Z",
+  "case_count": 25,
+  "source_data": "public frozen synthetic benchmark; source-backed finding evidence retained",
+  "removed_or_replaced_fields": [
+    "analysis_summary",
+    "findings[].explanation",
+    "findings[].remediation"
+  ],
+  "preserved_fields": [
+    "case_id",
+    "findings[].category",
+    "findings[].severity",
+    "findings[].start_line",
+    "findings[].end_line",
+    "findings[].evidence"
+  ],
+  "remediation_note": "Synthetic placeholders preserve only whether rubric terms were present; they are not model advice.",
+  "original_raw_sha256": "4652c4eb3f0ec16065c6664fb67ff4883842bfe1bd91969b53782d7e6d89ec34",
+  "sanitized_sha256": "d8015eedca47341fe5bc5d254cc6858623266c78fbb491f25b6d128f47789d09",
+  "matches_final_report": true,
+  "semantic_pct": 96.0,
+  "aggregate": "PASS",
+  "limitation": "Validates benchmark scores, structure, and source evidence; does not independently verify the original narrative text or gate test execution."
+}
