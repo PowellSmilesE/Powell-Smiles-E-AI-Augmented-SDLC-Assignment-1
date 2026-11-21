@@ -1,5 +1,11 @@
 # AI-Augmented SDLC — Assignment 1
 
+![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square)
+![Part 1A](https://img.shields.io/badge/Part--1A-CLI%20Application-555555?style=flat-square)
+![Part 1B](https://img.shields.io/badge/Part--1B-FastAPI%20%2B%20Groq-009688?style=flat-square)
+![Semantic Score](https://img.shields.io/badge/Semantic%20Score-96%25-brightgreen?style=flat-square)
+![Security Gates](https://img.shields.io/badge/Security%20Gates-6%2F6%20PASS-brightgreen?style=flat-square)
+
 A software engineering assignment documenting AI-assisted development, implementation, testing, security validation, and evaluation through two **independent** Python projects.
 
 - **Part-1A:** Security Alert Manager — a deterministic command-line application.
@@ -56,6 +62,7 @@ The application validates structured findings, source-line references, and evide
 │   ├── tests/                             # Automated tests
 │   ├── README.md
 │   └── pyproject.toml
+├── docs/screenshots/                   # Application screenshots
 └── README.md
 ```
 
@@ -154,7 +161,7 @@ Remove-Variable secure
 .\.venv\Scripts\python.exe -m uvicorn independent_review.api:app --host 127.0.0.1 --port 8000
 ```
 
-Open **http://127.0.0.1:8000** in your browser. Paste Python source code, select the external-transfer consent checkbox, and click **Analyze**. The response contains structured findings for human review. Do not submit credentials, confidential code, or other material you are not authorized to send to Groq.
+Open **http://127.0.0.1:8000** in your browser. Paste Python source code, select the external-transfer consent checkbox, and click **Analyze Code**. The response contains structured findings for human review. Do not submit credentials, confidential code, or other material you are not authorized to send to Groq.
 
 Stop the server with **Ctrl+C**.
 
@@ -177,7 +184,7 @@ The following results were recorded for the completed assignment and subsequentl
 
 | Verification | Part-1A | Part-1B |
 |---|---|---|
-| Automated tests | 40 passed, 1 POSIX-only test skipped | 32 passed |
+| Automated tests | 40 passed, 1 POSIX-only test skipped | 36 passed |
 | Linting | Ruff passed | Ruff passed |
 | Security checks | Bandit passed | Six scoped evidence gates passed |
 | Additional evaluation | 8 CLI acceptance scenarios passed | 25/25 benchmark cases; **96.0%** semantic accuracy |
@@ -191,28 +198,41 @@ The original live Groq responses are retained privately. The public sanitized re
 
 ## Screenshots
 
-Screenshots can be added later without changing the application or evaluation results. Create a `docs/screenshots/` folder at the repository root, then insert your own image files and uncomment the corresponding Markdown lines below.
+All screenshots below use synthetic demonstration data. They show the application functionality and the recorded evaluation results.
 
-### Part-1A — Alert Manager CLI
+### Part-1A — Security Alert Manager (CLI)
 
-<!-- Add docs/screenshots/part-1a-create-alert.png and uncomment the line below. -->
-<!-- ![Part-1A: Creating a security alert](docs/screenshots/part-1a-create-alert.png) -->
+**1. Available CLI commands**
 
-<!-- Add docs/screenshots/part-1a-summary.png and uncomment the line below. -->
-<!-- ![Part-1A: Alert summary output](docs/screenshots/part-1a-summary.png) -->
+![Part-1A: Alert Manager help and available commands](docs/screenshots/alert-manager-help.png)
 
-### Part-1B — AI Security Review
+**2. Creating synthetic security alerts**
 
-<!-- Add docs/screenshots/part-1b-review-ui.png and uncomment the line below. -->
-<!-- ![Part-1B: Web interface and review submission](docs/screenshots/part-1b-review-ui.png) -->
+![Part-1A: Creating synthetic alerts](docs/screenshots/create-synthetic-alerts.png)
 
-<!-- Add docs/screenshots/part-1b-review-result.png and uncomment the line below. -->
-<!-- ![Part-1B: Structured findings requiring human review](docs/screenshots/part-1b-review-result.png) -->
+**3. Searching and filtering alerts**
 
-<!-- Add docs/screenshots/part-1b-evaluation.png and uncomment the line below. -->
-<!-- ![Part-1B: Published evaluation verification result](docs/screenshots/part-1b-evaluation.png) -->
+![Part-1A: Search and filter results](docs/screenshots/alerts-search-filter.png)
 
-**Screenshot guidance:** Use synthetic demonstration content and remove API keys, personal information, machine usernames, and private file paths before committing images.
+**4. Alert summary by severity and status**
+
+![Part-1A: Alert summary](docs/screenshots/alerts-summary.png)
+
+### Part-1B — AI Security Code Review Assistant
+
+**5. Security review dashboard**
+
+![Part-1B: Security review dashboard](docs/screenshots/Part1b-ui.png)
+
+**6. Vulnerability detection and remediation guidance**
+
+![Part-1B: Vulnerability detection results](docs/screenshots/Vulnerability-detection-results.png)
+
+**7. Final evaluation — 96% semantic accuracy, six security gates passed**
+
+![Part-1B: Final evaluation results](docs/screenshots/partb-eval-results.png)
+
+**Screenshot privacy:** Before publishing, check that images contain only synthetic data and do not expose API keys, credentials, confidential code, personal identifiers, or sensitive local paths.
 
 ## Security, privacy, and limitations
 
