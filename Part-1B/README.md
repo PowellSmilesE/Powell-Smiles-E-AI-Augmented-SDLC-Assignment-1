@@ -55,24 +55,33 @@ To start the application:
 
 Open http://127.0.0.1:8000 . User code is transferred to Groq **only** with explicit consent.
 
-## Git — begin immediately
 
-```powershell
-git status
-git add .
-git commit -m 'Initial independent Part 1B spec, implementation, tests and draft dataset'
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_NEW_REPO.git
-git push -u origin main
-```
+## Final verified status — 21 November 2026
 
-The provided ZIP already contains an **initialized but uncommitted** Git repository. If the hidden `.git` directory does not survive extraction, first run `git init -b main`. Create an empty repo on GitHub and replace the URL. Do not claim the first commit
-represents separate historical development stages; commit subsequent actual reviews, fixes,
-and evaluations as they happen. **Do not push your API key, private code samples or raw live
-provider responses**. Verify `.gitignore` before `git add`.
+The independent Part-1B implementation has completed live Groq evaluation and final validation.
 
-## Honest current status
+| Validation | Result |
+|---|---|
+| Aggregate evaluation | PASS |
+| Semantic accuracy | 96.0% |
+| Required semantic threshold | 90% |
+| Frozen benchmark cases | 25/25 |
+| Minimum per-case score | 75% |
+| Critical vulnerability recall | 100% |
+| Security gates | 6/6 PASS |
+| Automated tests | 32 passed |
+| Ruff | All checks passed |
 
-Local engineering tests are verifiable; **no live Groq scoring has been performed** in this
-new project. Six mandatory gates are not yet completely proven; in particular live prompt-
-injection and broader scoped privacy audit are pending. The benchmark labels require your
-independent review. Do not call the project ACCEPT before these items are verified.
+The 25 benchmark labels were reviewed and frozen before the final evaluation.
+
+**Final evaluation run:** `20261121T150550Z`
+
+**Final report:** `results/final-20261121T150550Z.json`
+
+**Security evidence:** `evidence/my-gate-review.json` and `evidence/gates/`
+
+The six security gates cover source non-execution, prompt-injection resistance, human review, denominator preservation, credential non-disclosure, and no persistence.
+
+These results apply to the documented tests and scope. Prompt-injection resistance is not universal, and external provider data retention is outside the application's verification scope.
+
+Raw live provider responses are intentionally excluded from Git and retained locally to avoid publishing potentially sensitive source content.
