@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+.env
+.env.*
+!.env.example
+coverage.xml
+.coverage
+htmlcov/
+*.egg-info/
+results/live-*.json
+results/live-*.jsonl
+results/gates-*.json
+
+results/local-gates.json

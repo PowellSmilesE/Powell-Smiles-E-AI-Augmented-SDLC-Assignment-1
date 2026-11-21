@@ -1,0 +1,15 @@
+# Implementation tasks (live statuses)
+- [x] T001 Draft independent specification/constitution and 90% policy.
+- [x] T002 Implement strict review contract and source evidence validation.
+- [x] T003 Implement Groq adapter and bounded transient retries.
+- [x] T004 Implement FastAPI UI/API with explicit transfer consent.
+- [x] T005 Implement independent three-layer harness and scoring.
+- [x] T006 Author 25 new draft benchmark cases and human review forms.
+- [x] T007 Write offline contract, API, scorer and provider tests.
+- [ ] T008 Independent student review of all 25 labels and reviewer attestations.
+- [ ] T009 Freeze reviewed dataset/spec/scorer before final live testing.
+- [ ] T010 Run actual Groq evaluation and preserve true outcomes.
+- [ ] T011 Complete live prompt-injection and scoped privacy gate evidence.
+- [ ] T012 Resolve real defects and rerun unchanged benchmark; preserve historical evidence.
+- [ ] T013 Student signs final ACCEPT/REJECT and completes own harness log.
+- [ ] T014 Publish public GitHub repo after checking secrets and submission requirements.
