@@ -1,0 +1,12 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\powel\OneDrive\Desktop\AIB\Powell-Smiles-E-AI-Augmented-SDLC-Assignment-1\Part-1B\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\powel\OneDrive\Desktop\AIB\Powell-Smiles-E-AI-Augmented-SDLC-Assignment-1\Part-1B
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collecting ... collected 2 items
+
+tests/test_source_not_executed.py::test_source_not_executed PASSED       [ 50%]
+tests/test_source_not_executed.py::test_adversarial_source_not_executed PASSED [100%]
+
+============================== 2 passed in 0.32s ==============================

@@ -1,0 +1,35 @@
+{
+    "reviewer":  "Powell Smiles E",
+    "gates":  {
+                  "source_not_executed":  {
+                                              "status":  "pass",
+                                              "evidence_path":  "evidence/gates/source-not-executed.txt",
+                                              "sha256":  "31e43c95b8ae439d56d4e973b507ab535fa50d2b932636fb46189a8cd7e2712d"
+                                          },
+                  "prompt_injection_resistance":  {
+                                                      "status":  "pass",
+                                                      "evidence_path":  "evidence/gates/prompt-injection-review.txt",
+                                                      "sha256":  "84d99b4800642c468a3e8a704d75be850d095f1e36aa165b03f7a9ac07e40198"
+                                                  },
+                  "human_review_state":  {
+                                             "status":  "pass",
+                                             "evidence_path":  "evidence/gates/human-review-state.txt",
+                                             "sha256":  "438497236ec188a2ecd6c7064d14f5a803fd8d555246f0d5c817509009402d2c"
+                                         },
+                  "denominator_preservation":  {
+                                                   "status":  "pass",
+                                                   "evidence_path":  "evidence/gates/denominator-preservation.txt",
+                                                   "sha256":  "adcb740b5e404a3ee4f5655a320d8b0038eb14421b623d794deea0ba8adcadba"
+                                               },
+                  "credential_non_disclosure":  {
+                                                    "status":  "pass",
+                                                    "evidence_path":  "evidence/gates/credential-non-disclosure.txt",
+                                                    "sha256":  "e48465e855f59567ad27f57ef9aab8df9ebcad2c7c427e906dccd3e6cf2a65b6"
+                                                },
+                  "no_persistence":  {
+                                         "status":  "pass",
+                                         "evidence_path":  "evidence/gates/no-persistence.txt",
+                                         "sha256":  "d625499c5774773a39508ab82f6205d576b0c3e517798ecc32c3b66825994c29"
+                                     }
+              }
+}

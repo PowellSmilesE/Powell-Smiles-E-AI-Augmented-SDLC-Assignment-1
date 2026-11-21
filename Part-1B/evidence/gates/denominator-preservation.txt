@@ -1,0 +1,21 @@
+﻿Gate: denominator_preservation
+
+Completed run: 20261121T150550Z
+Declared denominator: 25
+Recorded rows: 25
+Unique case IDs: 25
+Missing cases: 0
+
+Failure preservation run: 20261121T144528Z
+Recorded rows: 25
+Failed case: fresh-009-unauthorized-profile-edit
+Recorded error: InvalidReview
+
+Observation:
+The collector retains failed cases rather than silently dropping them.
+
+Scope:
+This check covers the two recorded evaluation runs and the application's
+evaluation collector, not arbitrary external services.
+
+Reviewer conclusion: Pending final confirmation.
